@@ -40,7 +40,7 @@
     </div>
   </div>
 </section>
-<section class="breadcrumb-section set-bg" [style.background]="'url(../../../assets/static/img/anh1.jpg)'">
+<section class="breadcrumb-section set-bg" [style.background]="'url(assets/static/img/anh1.jpg)'">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
@@ -145,7 +145,7 @@
             <tr *ngFor="let bill of listBill; index as i">
               <td>{{i + 1}}</td>
               <td>
-                {{bill.bookingDate | date:'dd/MM/yyyy'}}
+                {{bill.bookingDate | date}}
               </td>
               <td>
                 {{bill.totalPrice | currency:'VND'}}
@@ -156,7 +156,7 @@
               <td style="text-align: center;">
                 <div class="row">
                   <div style="margin-left: auto; margin-right: auto">
-                    <button (click)="initModal(bill, 'show')" class="btn btn-block btn-warning"
+                    <button (click)="initModal(bill, 'edit')" class="btn btn-block btn-warning"
                             style="color: white; width: 80px; text-align: center">
                       <i class="fas fa-check"></i>
                     </button>

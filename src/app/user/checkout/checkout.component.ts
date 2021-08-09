@@ -446,7 +446,7 @@ export class CheckoutComponent implements OnInit {
 
   createNotification() {
     const notification = {
-      content: 'Thuê nhà thành công',
+      content: this.currentUser.name + ' đã đặt thuê thành công ' + this.currentHouse.name,
       status: true,
       user: [
         {

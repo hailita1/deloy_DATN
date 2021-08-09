@@ -203,15 +203,15 @@
   <div id="pdf" [hidden]="true">
     <div class="in-bao-gia-container">
       <div class="in-bao-gia-header">
-        <div class="in-bao-gia-header-left"><img src="../../../../assets/static/img/logo.png"/></div>
+        <div class="in-bao-gia-header-left"><img src="assets/static/img/logo.png"/></div>
         <div class="in-bao-gia-header-right">
           <p class="ten-cong-ty">CÔNG TY CHUYÊN CUNG CẤP DỊCH VỤ HOMESTAY</p>
           <p>Trụ sở chính: Đồng Mạc - Tiên Hội - Đại Từ - Thái Nguyên</p>
           <p>Số nhà 4 ngách 34 ngõ 27 Lạc Long Quân - Nghĩa Đô - Cầu giấy - Hà Nội</p>
-          <p>Hotline: 0396355470 * Website: www.ogani.vn</p>
+          <p>Hotline: 0396355470 * Website: www.homestay.vn</p>
         </div>
       </div>
-      <div style="margin-top: 20px" class="in-bao-gia-title">HÓA ĐƠN ĐẶT THUÊ HOMESTAY VÀ DỊCH VỤ</div>
+      <div style="margin-top: 100px" class="in-bao-gia-title">HÓA ĐƠN ĐẶT THUÊ HOMESTAY VÀ DỊCH VỤ</div>
       <div class="date-currency">
         <p>Ngày xuất hóa đơn: <span id="price_time">{{minDate | date: 'dd/MM/yyyy HH:mm:ss'}}</span></p>
         <p>Đơn vị tính: <span class="currency">VND</span></p>
@@ -236,13 +236,13 @@
           <td style="text-align: center"> {{data.houseBill.discount}}%</td>
           <td style="text-align: center">{{data.houseBill.price | currency: 'VND'}} / đêm</td>
           <td style="text-align: center">
-            {{(priceHomeStay)}}
+            {{priceHomeStay | currency: 'VND'}}
           </td>
         </tr>
         <tr>
           <td colspan="4"></td>
           <td style="text-align: center" colspan="-1"><strong>Tổng tiền</strong></td>
-          <td><strong style="color: red; text-align: center">{{(priceHomeStay)}}đ</strong>
+          <td><strong style="color: red; text-align: center">{{priceHomeStay | currency: 'VND'}}đ</strong>
           </td>
         </tr>
         </tbody>
